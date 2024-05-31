@@ -193,12 +193,11 @@ export default defineComponent({
                         class={mergedClassName}
                         onMouseenter={onMouseenter}
                         onMouseleave={onMouseleave}
+                        // @ts-ignore
                         onMousedown={withModifiers(onMousedown, ['capture'])}
                         {...{
-                          [supportsPassive ? 'onTouchstartPassive' : 'onTouchstart']: withModifiers(
-                            onTouchstart,
-                            ['capture'],
-                          ),
+                           // @ts-ignore
+                          [supportsPassive ? 'onTouchstartPassive' : 'onTouchstart']: withModifiers( onTouchstart, ['capture'], ),
                         }}
                         style={mergedStyle}
                       >

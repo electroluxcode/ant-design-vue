@@ -401,6 +401,7 @@ export default defineComponent({
       getPopupContainer: computed(() => props.getPopupContainer),
       inlineCollapsed: mergedInlineCollapsed,
       antdMenuTheme: computed(() => props.theme),
+      // @ts-ignore
       siderCollapsed,
       defaultMotions: computed(() => (isMounted.value ? defaultMotions.value : null)),
       motion: computed(() => (isMounted.value ? props.motion : null)),
